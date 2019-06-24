@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="12" height="10" viewBox="0 0 12 10">
+  <defs>
+    <style>
+
+      .cls-2 {
+        fill: #000000;
+        filter: url(#gradient-overlay-1);
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="-0.34375" y="-0.15625" preserveAspectRatio="none" width="11.6875" height="9.3125" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTEuNjg3NSIgaGVpZ2h0PSI5LjMxMjUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwIiB5MT0iNC42NTYiIHgyPSIxMS42ODgiIHkyPSI0LjY1NiI+CiAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNGMxNTcwIi8+CiAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYmYyMjY4Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend mode="normal" in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+  </defs>
+  <path d="M11.664,1.105 C11.647,1.086 11.619,1.079 11.596,1.090 C11.247,1.242 10.880,1.351 10.502,1.416 C10.903,1.119 11.202,0.709 11.356,0.238 C11.363,0.216 11.355,0.191 11.336,0.177 C11.318,0.162 11.291,0.160 11.271,0.172 C10.819,0.435 10.329,0.621 9.815,0.723 C9.359,0.260 8.723,-0.006 8.064,-0.006 C6.725,-0.006 5.635,1.063 5.635,2.377 C5.635,2.536 5.651,2.693 5.682,2.846 C3.827,2.734 2.092,1.860 0.913,0.441 C0.901,0.426 0.883,0.418 0.864,0.420 C0.845,0.421 0.828,0.432 0.818,0.448 C0.603,0.810 0.489,1.225 0.489,1.646 C0.489,2.377 0.828,3.060 1.404,3.511 C1.107,3.476 0.817,3.384 0.556,3.242 C0.539,3.232 0.517,3.232 0.499,3.242 C0.482,3.252 0.470,3.270 0.470,3.290 C0.470,3.290 0.470,3.321 0.470,3.321 C0.470,4.370 1.174,5.291 2.177,5.597 C1.913,5.639 1.639,5.636 1.370,5.586 C1.350,5.582 1.329,5.589 1.315,5.604 C1.302,5.619 1.297,5.640 1.303,5.659 C1.604,6.579 2.440,7.225 3.412,7.306 C2.601,7.889 1.642,8.196 0.629,8.196 C0.442,8.196 0.255,8.185 0.070,8.164 C0.044,8.161 0.018,8.176 0.009,8.201 C-0.000,8.226 0.010,8.254 0.032,8.268 C1.128,8.958 2.396,9.322 3.698,9.322 C7.957,9.322 10.501,5.928 10.501,2.647 C10.501,2.555 10.500,2.464 10.496,2.374 C10.955,2.044 11.350,1.641 11.668,1.173 C11.682,1.152 11.680,1.125 11.664,1.105 Z" id="path-1" class="cls-2" fill-rule="evenodd"/>
+</svg>

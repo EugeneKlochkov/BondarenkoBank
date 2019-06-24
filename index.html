@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bondarenko Bank</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="styles/all.min.css" rel="stylesheet">
+    <link href="styles/animate.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<!--Спрайт для изображений в формате svg-->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <defs>
+        <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+            <feImage x="0.15625" y="0.09375" preserveAspectRatio="none" width="6.4375" height="13.40625"
+                     xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNi40Mzc1IiBoZWlnaHQ9IjEzLjQwNjI1Ij48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMy4yMTkiIHkxPSI5LjkyMiIgeDI9IjMuMjE5IiB5Mj0iMy40ODQiPgogIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzRjMTU3MCIvPgogIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2JmMjI2OCIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIi8+PC9zdmc+"/>
+            <feComposite operator="in" in2="SourceGraphic"/>
+            <feBlend mode="normal" in2="SourceGraphic" result="gradientFill"/>
+        </filter>
+    </defs>
+    <symbol width="44" height="37" viewBox="0 0 44 37" id="finance">
+        <path d="M42.377,36.116 C42.377,36.116 4.840,36.116 4.840,36.116 C2.176,36.116 0.009,33.965 0.009,31.320 C0.009,31.320 0.009,12.387 0.009,12.387 C0.009,9.742 2.176,7.591 4.840,7.591 C4.840,7.591 9.203,7.591 9.203,7.591 C9.203,7.591 35.183,0.001 35.183,0.001 C35.403,-0.063 35.640,-0.038 35.841,0.072 C36.042,0.182 36.191,0.367 36.254,0.585 C36.254,0.585 38.279,7.591 38.279,7.591 C38.279,7.591 42.377,7.591 42.377,7.591 C42.852,7.591 43.238,7.974 43.238,8.446 C43.238,8.446 43.238,35.261 43.238,35.261 C43.238,35.734 42.852,36.116 42.377,36.116 ZM34.838,1.884 C34.838,1.884 32.908,2.448 32.908,2.448 C32.908,2.448 34.575,3.303 34.575,3.303 C34.575,3.303 35.365,3.708 35.365,3.708 C35.365,3.708 34.838,1.884 34.838,1.884 ZM36.018,5.967 C36.018,5.967 33.098,4.470 33.098,4.470 C33.098,4.470 30.518,3.147 30.518,3.147 C30.518,3.147 15.304,7.591 15.304,7.591 C15.304,7.591 36.488,7.591 36.488,7.591 C36.488,7.591 36.018,5.967 36.018,5.967 ZM41.516,18.974 C41.516,18.974 34.576,18.974 34.576,18.974 C32.976,18.974 31.675,20.266 31.675,21.854 C31.675,23.442 32.976,24.734 34.576,24.734 C34.576,24.734 41.516,24.734 41.516,24.734 C41.516,24.734 41.516,18.974 41.516,18.974 ZM41.516,26.444 C41.516,26.444 34.576,26.444 34.576,26.444 C32.027,26.444 29.953,24.384 29.953,21.854 C29.953,19.323 32.027,17.263 34.576,17.263 C34.576,17.263 41.515,17.263 41.515,17.263 C41.515,17.263 41.515,9.301 41.515,9.301 C41.515,9.301 4.840,9.301 4.840,9.301 C3.126,9.301 1.732,10.685 1.732,12.387 C1.732,12.387 1.732,31.320 1.732,31.320 C1.732,33.022 3.126,34.406 4.840,34.406 C4.840,34.406 41.516,34.406 41.516,34.406 C41.516,34.406 41.516,26.444 41.516,26.444 ZM22.271,31.665 C22.271,31.665 22.875,31.665 22.875,31.665 C23.350,31.665 23.736,32.047 23.736,32.520 C23.736,32.992 23.350,33.375 22.875,33.375 C22.875,33.375 22.271,33.375 22.271,33.375 C21.795,33.375 21.410,32.992 21.410,32.520 C21.410,32.047 21.795,31.665 22.271,31.665 ZM26.585,31.665 C26.585,31.665 39.529,31.665 39.529,31.665 C40.005,31.665 40.390,32.047 40.390,32.520 C40.390,32.992 40.005,33.375 39.529,33.375 C39.529,33.375 26.585,33.375 26.585,33.375 C26.110,33.375 25.724,32.992 25.724,32.520 C25.724,32.047 26.110,31.665 26.585,31.665 ZM32.282,21.854 C32.282,20.579 33.327,19.542 34.610,19.542 C35.894,19.542 36.939,20.579 36.939,21.854 C36.939,23.128 35.894,24.165 34.610,24.165 C33.327,24.165 32.282,23.128 32.282,21.854 ZM34.611,22.455 C34.945,22.455 35.216,22.185 35.216,21.854 C35.216,21.522 34.945,21.252 34.611,21.252 C34.277,21.252 34.005,21.522 34.005,21.854 C34.005,22.185 34.277,22.455 34.611,22.455 Z"
+              id="path-1" class="cls-1" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="52" height="41" viewBox="0 0 52 41" id="loans">
+
+        <path d="M51.400,24.537 C51.400,24.537 40.910,24.537 40.910,24.537 C40.910,24.537 40.910,39.389 40.910,39.389 C40.910,39.953 40.443,40.410 39.866,40.410 C39.866,40.410 1.049,40.410 1.049,40.410 C0.472,40.410 0.004,39.953 0.004,39.389 C0.004,39.389 0.004,16.904 0.004,16.904 C0.004,16.340 0.472,15.883 1.049,15.883 C1.049,15.883 11.539,15.883 11.539,15.883 C11.539,15.883 11.539,1.031 11.539,1.031 C11.539,0.466 12.007,0.009 12.583,0.009 C12.583,0.009 51.400,0.009 51.400,0.009 C51.977,0.009 52.445,0.466 52.445,1.031 C52.445,1.031 52.445,23.515 52.445,23.515 C52.445,24.079 51.977,24.537 51.400,24.537 ZM2.093,17.926 C2.093,17.926 2.093,38.367 2.093,38.367 C2.093,38.367 38.821,38.367 38.821,38.367 C38.821,38.367 38.821,17.926 38.821,17.926 C38.821,17.926 2.093,17.926 2.093,17.926 ZM50.356,2.052 C50.356,2.052 13.628,2.052 13.628,2.052 C13.628,2.052 13.628,4.965 13.628,4.965 C13.628,4.965 50.356,4.965 50.356,4.965 C50.356,4.965 50.356,2.052 50.356,2.052 ZM50.356,7.008 C50.356,7.008 13.628,7.008 13.628,7.008 C13.628,7.008 13.628,9.801 13.628,9.801 C13.628,9.801 50.356,9.801 50.356,9.801 C50.356,9.801 50.356,7.008 50.356,7.008 ZM50.356,11.844 C50.356,11.844 13.628,11.844 13.628,11.844 C13.628,11.844 13.628,15.883 13.628,15.883 C13.628,15.883 39.866,15.883 39.866,15.883 C40.443,15.883 40.910,16.340 40.910,16.904 C40.910,16.904 40.910,22.493 40.910,22.493 C40.910,22.493 50.356,22.493 50.356,22.493 C50.356,22.493 50.356,11.844 50.356,11.844 ZM32.162,35.961 C31.470,35.961 30.820,35.782 30.257,35.469 C29.678,35.788 29.019,35.961 28.350,35.961 C26.214,35.961 24.477,34.262 24.477,32.174 C24.477,30.085 26.214,28.386 28.350,28.386 C29.019,28.386 29.678,28.559 30.257,28.878 C30.820,28.566 31.470,28.386 32.162,28.386 C34.298,28.386 36.035,30.085 36.035,32.174 C36.035,34.262 34.298,35.961 32.162,35.961 ZM28.707,30.465 C28.591,30.442 28.471,30.429 28.350,30.429 C27.366,30.429 26.566,31.212 26.566,32.174 C26.566,33.135 27.366,33.918 28.350,33.918 C28.472,33.918 28.591,33.905 28.707,33.882 C28.440,33.368 28.289,32.788 28.289,32.174 C28.289,31.559 28.440,30.979 28.707,30.465 ZM32.162,30.429 C31.178,30.429 30.378,31.212 30.378,32.174 C30.378,33.135 31.178,33.918 32.162,33.918 C33.146,33.918 33.946,33.135 33.946,32.174 C33.946,31.212 33.146,30.429 32.162,30.429 ZM34.086,23.334 C34.086,23.334 30.317,23.334 30.317,23.334 C29.740,23.334 29.273,22.877 29.273,22.313 C29.273,21.749 29.740,21.291 30.317,21.291 C30.317,21.291 34.086,21.291 34.086,21.291 C34.663,21.291 35.131,21.749 35.131,22.313 C35.131,22.877 34.663,23.334 34.086,23.334 ZM26.259,23.334 C26.259,23.334 22.490,23.334 22.490,23.334 C21.913,23.334 21.446,22.877 21.446,22.313 C21.446,21.749 21.913,21.291 22.490,21.291 C22.490,21.291 26.259,21.291 26.259,21.291 C26.836,21.291 27.304,21.749 27.304,22.313 C27.304,22.877 26.836,23.334 26.259,23.334 ZM18.389,23.334 C18.389,23.334 14.620,23.334 14.620,23.334 C14.043,23.334 13.575,22.877 13.575,22.313 C13.575,21.749 14.043,21.291 14.620,21.291 C14.620,21.291 18.389,21.291 18.389,21.291 C18.965,21.291 19.433,21.749 19.433,22.313 C19.433,22.877 18.965,23.334 18.389,23.334 ZM10.474,23.334 C10.474,23.334 6.706,23.334 6.706,23.334 C6.129,23.334 5.661,22.877 5.661,22.313 C5.661,21.749 6.129,21.291 6.706,21.291 C6.706,21.291 10.474,21.291 10.474,21.291 C11.051,21.291 11.519,21.749 11.519,22.313 C11.519,22.877 11.051,23.334 10.474,23.334 Z"
+              id="path-1" class="cls-2" fill-rule="evenodd"></path>
+    </symbol>
+
+    <symbol width="41" height="37" viewBox="0 0 41 37" id="profit">
+
+        <path d="M39.582,36.846 C39.582,36.846 0.797,36.846 0.797,36.846 C0.464,36.846 0.166,36.641 0.046,36.328 C-0.074,36.017 0.010,35.663 0.257,35.438 C0.257,35.438 39.042,0.199 39.042,0.199 C39.278,-0.016 39.617,-0.070 39.908,0.060 C40.199,0.189 40.386,0.479 40.386,0.798 C40.386,0.798 40.386,36.038 40.386,36.038 C40.386,36.484 40.026,36.846 39.582,36.846 ZM38.777,2.619 C38.777,2.619 2.886,35.230 2.886,35.230 C2.886,35.230 38.777,35.230 38.777,35.230 C38.777,35.230 38.777,2.619 38.777,2.619 ZM36.835,22.787 C37.280,22.787 37.640,23.149 37.640,23.595 C37.640,23.595 37.640,24.080 37.640,24.080 C37.640,24.527 37.280,24.889 36.835,24.889 C36.391,24.889 36.031,24.527 36.031,24.080 C36.031,24.080 36.031,23.595 36.031,23.595 C36.031,23.149 36.391,22.787 36.835,22.787 ZM36.835,26.101 C37.280,26.101 37.640,26.463 37.640,26.909 C37.640,26.909 37.640,33.053 37.640,33.053 C37.640,33.499 37.280,33.861 36.835,33.861 C36.391,33.861 36.031,33.499 36.031,33.053 C36.031,33.053 36.031,26.909 36.031,26.909 C36.031,26.463 36.391,26.101 36.835,26.101 ZM29.593,6.840 C29.149,6.840 28.789,6.478 28.789,6.031 C28.789,6.031 28.789,2.728 28.789,2.728 C28.789,2.728 3.263,27.651 3.263,27.651 C3.107,27.804 2.904,27.880 2.702,27.880 C2.492,27.880 2.283,27.798 2.125,27.635 C1.815,27.314 1.823,26.803 2.141,26.491 C2.141,26.491 27.589,1.645 27.589,1.645 C27.589,1.645 24.422,1.645 24.422,1.645 C23.977,1.645 23.617,1.283 23.617,0.836 C23.617,0.390 23.977,0.028 24.422,0.028 C24.422,0.028 29.593,0.028 29.593,0.028 C30.038,0.028 30.398,0.390 30.398,0.836 C30.398,0.836 30.398,6.031 30.398,6.031 C30.398,6.478 30.038,6.840 29.593,6.840 Z"
+              id="path-1" class="cls-3" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="16" height="10" viewBox="0 0 16 10" id="vk">
+        <path d="M15.111,7.099 C14.642,6.546 14.090,6.076 13.568,5.575 C13.097,5.124 13.067,4.863 13.446,4.343 C13.859,3.774 14.304,3.228 14.721,2.663 C15.110,2.135 15.508,1.608 15.713,0.975 C15.843,0.572 15.728,0.395 15.307,0.324 C15.235,0.312 15.160,0.311 15.086,0.311 C15.086,0.311 12.590,0.308 12.590,0.308 C12.283,0.304 12.113,0.435 12.004,0.703 C11.857,1.064 11.706,1.425 11.531,1.774 C11.134,2.564 10.691,3.328 10.070,3.976 C9.933,4.118 9.781,4.299 9.552,4.224 C9.266,4.122 9.182,3.659 9.186,3.503 C9.186,3.503 9.184,0.676 9.184,0.676 C9.128,0.272 9.037,0.092 8.628,0.014 C8.628,0.014 6.036,0.014 6.036,0.014 C5.689,0.014 5.516,0.145 5.331,0.358 C5.224,0.480 5.192,0.560 5.411,0.601 C5.842,0.681 6.084,0.954 6.148,1.377 C6.252,2.054 6.244,2.733 6.185,3.412 C6.167,3.610 6.133,3.808 6.053,3.993 C5.927,4.284 5.725,4.343 5.459,4.164 C5.218,4.002 5.049,3.774 4.883,3.544 C4.261,2.682 3.765,1.752 3.361,0.775 C3.244,0.493 3.042,0.322 2.737,0.318 C1.988,0.306 1.239,0.304 0.491,0.318 C0.040,0.326 -0.094,0.541 0.089,0.942 C0.905,2.722 1.813,4.452 2.998,6.029 C3.606,6.838 4.305,7.552 5.207,8.058 C6.230,8.632 7.331,8.804 8.491,8.751 C9.034,8.726 9.197,8.588 9.222,8.057 C9.239,7.694 9.281,7.332 9.464,7.006 C9.643,6.686 9.915,6.625 10.228,6.824 C10.384,6.924 10.516,7.051 10.641,7.185 C10.946,7.512 11.241,7.850 11.558,8.168 C11.956,8.565 12.427,8.799 13.020,8.751 C13.020,8.751 15.314,8.752 15.314,8.752 C15.684,8.728 15.876,8.284 15.664,7.879 C15.514,7.595 15.319,7.343 15.111,7.099 Z"
+              id="path-1" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="7" height="14" viewBox="0 0 7 14" id="facebook">
+        <path d="M6.432,2.216 C6.432,2.216 5.267,2.217 5.267,2.217 C4.354,2.217 4.177,2.688 4.177,3.378 C4.177,3.378 4.177,4.901 4.177,4.901 C4.177,4.901 6.355,4.901 6.355,4.901 C6.355,4.901 6.355,7.286 6.355,7.286 C6.355,7.286 4.177,7.286 4.177,7.286 C4.177,7.286 4.177,13.407 4.177,13.407 C4.177,13.407 1.905,13.407 1.905,13.407 C1.905,13.407 1.905,7.286 1.905,7.286 C1.905,7.286 0.005,7.286 0.005,7.286 C0.005,7.286 0.005,4.901 0.005,4.901 C0.005,4.901 1.905,4.901 1.905,4.901 C1.905,4.901 1.905,3.142 1.905,3.142 C1.905,1.101 3.055,-0.011 4.735,-0.011 C4.735,-0.011 6.432,-0.008 6.432,-0.008 C6.432,-0.008 6.432,2.216 6.432,2.216 C6.432,2.216 6.432,2.216 6.432,2.216 Z"
+              id="path-1" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="12" height="10" viewBox="0 0 12 10" id="twitter">
+        <path d="M11.664,1.105 C11.647,1.086 11.619,1.079 11.596,1.090 C11.247,1.242 10.880,1.351 10.502,1.416 C10.903,1.119 11.202,0.709 11.356,0.238 C11.363,0.216 11.355,0.191 11.336,0.177 C11.318,0.162 11.291,0.160 11.271,0.172 C10.819,0.435 10.329,0.621 9.815,0.723 C9.359,0.260 8.723,-0.006 8.064,-0.006 C6.725,-0.006 5.635,1.063 5.635,2.377 C5.635,2.536 5.651,2.693 5.682,2.846 C3.827,2.734 2.092,1.860 0.913,0.441 C0.901,0.426 0.883,0.418 0.864,0.420 C0.845,0.421 0.828,0.432 0.818,0.448 C0.603,0.810 0.489,1.225 0.489,1.646 C0.489,2.377 0.828,3.060 1.404,3.511 C1.107,3.476 0.817,3.384 0.556,3.242 C0.539,3.232 0.517,3.232 0.499,3.242 C0.482,3.252 0.470,3.270 0.470,3.290 C0.470,3.290 0.470,3.321 0.470,3.321 C0.470,4.370 1.174,5.291 2.177,5.597 C1.913,5.639 1.639,5.636 1.370,5.586 C1.350,5.582 1.329,5.589 1.315,5.604 C1.302,5.619 1.297,5.640 1.303,5.659 C1.604,6.579 2.440,7.225 3.412,7.306 C2.601,7.889 1.642,8.196 0.629,8.196 C0.442,8.196 0.255,8.185 0.070,8.164 C0.044,8.161 0.018,8.176 0.009,8.201 C-0.000,8.226 0.010,8.254 0.032,8.268 C1.128,8.958 2.396,9.322 3.698,9.322 C7.957,9.322 10.501,5.928 10.501,2.647 C10.501,2.555 10.500,2.464 10.496,2.374 C10.955,2.044 11.350,1.641 11.668,1.173 C11.682,1.152 11.680,1.125 11.664,1.105 Z"
+              id="path-1" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="7" height="12" viewBox="0 0 7 12" id="odnoclassniki">
+        <path d="M6.841,6.713 C6.480,7.065 6.046,7.320 5.564,7.498 C5.108,7.666 4.609,7.750 4.115,7.806 C4.189,7.883 4.225,7.921 4.271,7.966 C4.942,8.607 5.616,9.245 6.285,9.888 C6.513,10.107 6.561,10.379 6.435,10.633 C6.298,10.912 5.991,11.095 5.690,11.075 C5.499,11.063 5.350,10.973 5.218,10.846 C4.711,10.362 4.195,9.886 3.699,9.392 C3.555,9.249 3.485,9.276 3.358,9.401 C2.849,9.899 2.331,10.390 1.810,10.878 C1.576,11.098 1.298,11.137 1.027,11.012 C0.738,10.879 0.555,10.599 0.569,10.318 C0.579,10.128 0.677,9.983 0.814,9.852 C1.479,9.222 2.141,8.590 2.803,7.959 C2.847,7.917 2.888,7.872 2.952,7.807 C2.049,7.718 1.234,7.506 0.536,6.988 C0.450,6.923 0.361,6.861 0.282,6.789 C-0.024,6.510 -0.054,6.191 0.187,5.862 C0.394,5.581 0.741,5.505 1.101,5.667 C1.171,5.698 1.238,5.737 1.301,5.779 C2.601,6.628 4.387,6.652 5.692,5.818 C5.821,5.724 5.959,5.647 6.119,5.607 C6.430,5.531 6.721,5.640 6.888,5.899 C7.079,6.195 7.076,6.483 6.841,6.713 ZM3.502,5.612 C1.891,5.606 0.569,4.336 0.578,2.802 C0.588,1.250 1.910,0.000 3.538,0.004 C5.169,0.009 6.478,1.277 6.470,2.845 C6.461,4.376 5.131,5.617 3.502,5.612 ZM3.526,1.436 C2.720,1.435 2.075,2.053 2.082,2.822 C2.088,3.581 2.732,4.183 3.534,4.181 C4.333,4.178 4.970,3.567 4.967,2.805 C4.965,2.044 4.326,1.437 3.526,1.436 Z"
+              id="path-1" class="cls-5" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="12" height="10" viewBox="0 0 12 10" id="youtube">
+        <path d="M12.047,1.419 C11.897,0.751 11.364,0.259 10.723,0.186 C9.204,0.012 7.667,0.011 6.137,0.012 C4.606,0.011 3.068,0.012 1.549,0.186 C0.908,0.259 0.376,0.751 0.226,1.419 C0.013,2.369 0.010,3.407 0.010,4.385 C0.010,5.364 0.010,6.401 0.224,7.352 C0.373,8.019 0.906,8.511 1.547,8.585 C3.066,8.759 4.604,8.760 6.134,8.759 C7.665,8.760 9.202,8.759 10.721,8.585 C11.362,8.511 11.895,8.019 12.045,7.352 C12.258,6.401 12.259,5.364 12.259,4.385 C12.259,3.407 12.261,2.369 12.047,1.419 ZM4.554,6.333 C4.554,4.945 4.554,3.571 4.554,2.183 C5.852,2.877 7.142,3.566 8.448,4.264 C7.146,4.956 5.856,5.642 4.554,6.333 Z"
+              id="path-1" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol width="12" height="12" viewBox="0 0 12 12" id="instagram">
+        <path d="M1.423,0.014 C1.423,0.014 9.661,0.014 9.661,0.014 C10.443,0.014 11.084,0.624 11.084,1.511 C11.084,1.511 11.084,10.180 11.084,10.180 C11.084,11.067 10.443,11.677 9.661,11.677 C9.661,11.677 1.423,11.677 1.423,11.677 C0.640,11.677 -0.000,11.067 -0.000,10.180 C-0.000,10.180 -0.000,1.511 -0.000,1.511 C-0.000,0.624 0.640,0.014 1.423,0.014 C1.423,0.014 1.423,0.014 1.423,0.014 ZM8.074,1.310 C7.799,1.310 7.575,1.546 7.575,1.835 C7.575,1.835 7.575,3.091 7.575,3.091 C7.575,3.380 7.799,3.617 8.074,3.617 C8.074,3.617 9.327,3.617 9.327,3.617 C9.601,3.617 9.826,3.380 9.826,3.091 C9.826,3.091 9.826,1.835 9.826,1.835 C9.826,1.546 9.601,1.310 9.327,1.310 C9.327,1.310 8.074,1.310 8.074,1.310 C8.074,1.310 8.074,1.310 8.074,1.310 ZM9.831,4.946 C9.831,4.946 8.855,4.946 8.855,4.946 C8.948,5.263 8.998,5.599 8.998,5.947 C8.998,7.886 7.455,9.459 5.552,9.459 C3.650,9.459 2.107,7.886 2.107,5.947 C2.107,5.599 2.157,5.263 2.250,4.946 C2.250,4.946 1.232,4.946 1.232,4.946 C1.232,4.946 1.232,9.873 1.232,9.873 C1.232,10.127 1.430,10.336 1.672,10.336 C1.672,10.336 9.391,10.336 9.391,10.336 C9.633,10.336 9.831,10.128 9.831,9.873 C9.831,9.873 9.831,4.946 9.831,4.946 C9.831,4.946 9.831,4.946 9.831,4.946 ZM5.552,3.550 C4.323,3.550 3.326,4.567 3.326,5.820 C3.326,7.073 4.323,8.090 5.552,8.090 C6.782,8.090 7.778,7.073 7.778,5.820 C7.778,4.567 6.782,3.550 5.552,3.550 Z"
+              id="path-1" fill-rule="evenodd"></path>
+    </symbol>
+</svg>
+
+<!--Кнопка прокрутки страници к началу-->
+<button class="top-scroll wow heartBeat" data-wow-iteration="10">
+    <i class="fas fa-angle-up"></i>
+</button>
+
+<!--Баннер-->
+<header class="ea-banner">
+    <div class="container">
+
+        <!--Навигация-->
+        <nav class="navbar navbar-expand-lg navbar-light wow fadeInDownBig">
+            <a class="navbar-brand ea-logo" href="#">
+                <img src="img/logo.png" alt="Logo" class="ea-logo__img">
+                <span class="ea-logo__title">Bango Bank</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars color-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav m-auto ea-navbar-nav_stile">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">deposits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">payments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">investments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">epoteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">credit</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn_white" type="submit">Sigh in</button>
+                </form>
+            </div>
+        </nav>
+
+        <!--Контент в банере-->
+        <div class="row">
+            <div class="col-sm-6 col-lg-5 ea-banner-content">
+                <h1 class="ea-title">bango business</h1>
+                <p class="ea-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been.
+                </p>
+                <button class="btn_white">More</button>
+            </div>
+        </div>
+
+        <!--Блок с картой-->
+        <div class="ea-banner-card wow fadeInRight" data-wow-delay="1s">
+            <img src="img/hand.png" alt="" class="ea-banner-card__img">
+            <div class="ea-banner-card__content">
+                <a class="navbar-brand ea-logo" href="#">
+                    <img src="img/logo.png" alt="Logo" class="ea-logo__img">
+                    <span class="ea-logo__title">Bango Bank</span>
+                </a>
+                <p class="ea-num-card">
+                    <span>4321</span>
+                    <span>2345</span>
+                    <span>2342</span>
+                    <span>3434</span>
+                    <span>7654</span>
+                </p>
+                <p class="ea-owner-card">Alex Polyakov</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Контент страницы-->
+<main class="main">
+    <div class="container">
+
+        <!--Секция с большими изображениями-->
+        <section class="row ea-box ea-box_1">
+            <div class="col-lg-7 ea-box-img wow flipInY" data-wow-offset="200">
+                <h2 class="ea-box-img__title">Bango Bank</h2>
+                <p class="ea-box-img__content">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry.
+                </p>
+                <button class="btn_white">More</button>
+            </div>
+            <div class="col-lg-5 ea-box-content wow slideInRight" data-wow-offset="200">
+                <div class="ea-wrap-right">
+                    <button class="btn_pink wow jackInTheBox" data-wow-offset="200" data-wow-delay=".5s">Cards</button>
+                    <h3 class="ea-box-content__title">
+                        ALL Airlines
+                    </h3>
+                    <p class="ea-box-content__text">
+                        It is a long established fact that
+                    </p>
+                </div>
+                <div class="ea-wrap-left">
+                    <img src="img/airplane.jpg" alt="Airplane">
+                </div>
+            </div>
+        </section>
+        <section class="row ea-box ea-box_2">
+            <div class="col-lg-7 ea-box-img wow flipInY" data-wow-offset="200">
+                <h2 class="ea-box-img__title">Tpansfer</h2>
+                <p class="ea-box-img__content">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry.
+                </p>
+                <button class="btn_white">More</button>
+            </div>
+            <div class="col-lg-5 ea-box-content wow slideInRight" data-wow-offset="200">
+                <div class="ea-wrap-right">
+                    <button class="btn_pink wow jackInTheBox" data-wow-offset="200" data-wow-delay=".5s">Services
+                    </button>
+                    <h3 class="ea-box-content__title">
+                        ALL Airlines
+                    </h3>
+                    <p class="ea-box-content__text">It is a long established fact that Many desktop publishing packages
+                        and
+                        web page editors
+                    </p>
+                </div>
+                <div class="ea-wrap-left">
+                    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom"
+                            title="Number is right">
+                        number STS
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--Секция с табами-->
+        <section class="transfer">
+            <div class="row transfer__nav">
+                <ul class="col-lg-12 nav nav-pills">
+                    <li class="nav-item wow zoomInDown" data-wow-offset="100" data-wow-delay=".5s">
+                        <a class="nav-link active"
+                           href="javascript:void(0);"
+                           data-tab="finance"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="44"
+                                 height="37"
+                                 viewBox="0 0 44 37"
+                            >
+                                <use xlink:href="#finance"></use>
+                            </svg>
+                            <span class="nav-link__title">Finance</span>
+                        </a>
+                    </li>
+                    <li class="nav-item wow zoomInDown" data-wow-offset="100" data-wow-delay="1s">
+                        <a class="nav-link"
+                           href="javascript:void(0);"
+                           data-tab="loans"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="52"
+                                 height="41"
+                                 viewBox="0 0 52 41"
+                            >
+                                <use xlink:href="#loans"></use>
+                            </svg>
+                            <span class="nav-link__title">Loans</span>
+                        </a>
+                    </li>
+                    <li class="nav-item wow zoomInDown" data-wow-offset="100" data-wow-delay="1.5s">
+                        <a class="nav-link"
+                           href="javascript:void(0);"
+                           data-tab="profit"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="41"
+                                 height="37"
+                                 viewBox="0 0 41 37"
+                            >
+                                <use xlink:href="#profit"></use>
+                            </svg>
+                            <span class="nav-link__title">Profit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row transfer__content wow slideInUp" data-wow-offset="200" data-wow-duration="2s">
+                <div class="col-12 substrate">
+                    <div data-tab="finance" class="active">
+                        <h2 class="ea-title">Transfer from card to card</h2>
+                        <p class="ea-text">It is a long established fact that publishing packages:
+                        </p>
+                        <form action="/">
+                            <div class="row ea-box-inputs">
+                                <div class="ea-box-input">
+                                    <label>
+                                        <span>from</span>
+                                        <input type="text" placeholder="0000 0000 0000 0000" id="from-card">
+                                    </label>
+                                </div>
+                                <img src="img/arrow.svg" alt="Arrow next">
+                                <div class="ea-box-input">
+                                    <label>
+                                        <span>to</span>
+                                        <input type="text" placeholder="0000 0000 0000 0000" id="to-card">
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div data-tab="loans">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugiat magni perspiciatis
+                        praesentium quibusdam, quidem quos repellendus tempora velit voluptates.
+                    </div>
+                    <div data-tab="profit">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ea-magazine wow zoomIn" data-wow-duration="2s" data-wow-offset="200">
+            <h2 class="ea-title">Bongo Magazine</h2>
+            <div class="row articles">
+                <article class="card col-md-12 col-lg-6 article">
+                    <div class="row no-gutters">
+                        <div class="col-sm-6">
+                            <img src="img/magazine-img1.jpg"
+                                 alt="Growth report"
+                                 class="card-img"
+                            >
+                        </div>
+                        <div class="col-sm-6 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum is simply dummy text of the
+                            </h5>
+                            <p class="card-text">
+                                There are many variations of passages of Lorem Ipsum
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-12 col-lg-6 article">
+                    <div class="row no-gutters">
+                        <div class="col-sm-6">
+                            <img src="img/magazine-img2.jpg"
+                                 alt="Photo manager"
+                                 class="card-img"
+                            >
+                        </div>
+                        <div class="col-sm-6 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum is simply dummy text of the
+                            </h5>
+                            <p class="card-text">
+                                There are many variations of passages of Lorem Ipsum
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Section mobile applications -->
+        <section class="mobile-app wow zoomIn" data-wow-duration="2s" data-wow-offset="200">
+            <h2 class="ea-title">Mobile App</h2>
+            <div class="row applications">
+                <article class="card col-md-6 col-lg-4 application wow zoomInDown" data-wow-offset="200" data-wow-delay="1s">
+                    <div class="row no-gutters">
+                        <div class="col-4 application-logo">
+                            <img src="img/logo-bango.png" alt="Logo">
+                        </div>
+                        <div class="col-8 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum
+                            </h5>
+                            <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have sufferedz
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-6 col-lg-4 application wow zoomInDown" data-wow-offset="200" data-wow-delay="1s">
+                    <div class="row no-gutters">
+                        <div class="col-4 application-logo">
+                            <img src="img/logo-bank2.png" alt="Logo" class="mr-3">
+                        </div>
+                        <div class="col-8 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum
+                            </h5>
+                            <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have sufferedz
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-6 col-lg-4 application wow zoomInDown" data-wow-offset="200" data-wow-delay="1s">
+                    <div class="row no-gutters">
+                        <div class="col-4 application-logo">
+                            <img src="img/logo-china.png" alt="Logo">
+                        </div>
+                        <div class="col-8 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum
+                            </h5>
+                            <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have sufferedz
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-6 col-lg-4 application wow zoomInDown" data-wow-offset="200" data-wow-delay="1s">
+                    <div class="row no-gutters">
+                        <div class="col-4 application-logo">
+                            <img src="img/logo-atom.png" alt="Logo">
+                        </div>
+                        <div class="col-8 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum
+                            </h5>
+                            <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have sufferedz
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-6 col-lg-4 application wow zoomInDown" data-wow-offset="200" data-wow-delay="1s">
+                    <div class="row no-gutters">
+                        <div class="col-4 application-logo">
+                            <img src="img/logo-a.png" alt="Logo">
+                        </div>
+                        <div class="col-8 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum
+                            </h5>
+                            <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have sufferedz
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-6 col-lg-4 application wow zoomInDown" data-wow-offset="200" data-wow-delay="1s">
+                    <div class="row no-gutters">
+                        <div class="col-4 application-logo">
+                            <img src="img/logo-bank6.png" alt="Logo">
+                        </div>
+                        <div class="col-8 card-body">
+                            <h5 class="card-title">
+                                Lorem Ipsum
+                            </h5>
+                            <p class="card-text">There are many variations of passages of Lorem Ipsum available, but the
+                                majority have sufferedz
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
+</main>
+<footer class="ea-footer wow slideInUp" data-wow-offset="200" data-wow-duration="3s">
+    <div class="ea-footer__top">
+        <div class="container">
+            <section class="row ea-contacts">
+                <div class="col-lg-6 ea-phone">
+                    <div class="col-6 phone">
+                        <h2 class="ea-title">8 800 333-777-3</h2>
+                        <p>For orders in the USA</p>
+                    </div>
+                    <div class="col-4 wrap-btn">
+                        <button class="btn_pink" type="submit">
+                            <div class="box-phone"></div>
+                            online call
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 ea-social">
+                    <nav class="nav">
+                        <a class="nav-link active" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="16"
+                                 height="10"
+                                 viewBox="0 0 16 10"
+                            >
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                        <a class="nav-link" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="7"
+                                 height="14"
+                                 viewBox="0 0 7 14"
+                            >
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="nav-link" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="12"
+                                 height="10"
+                                 viewBox="0 0 12 10"
+                            >
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="nav-link" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="7" height="12" viewBox="0 0 7 12"
+                            >
+                                <use xlink:href="#odnoclassniki"></use>
+                            </svg>
+                        </a>
+                        <a class="nav-link" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="12" height="10" viewBox="0 0 12 10"
+                            >
+                                <use xlink:href="#youtube"></use>
+                            </svg>
+                        </a>
+                        <a class="nav-link" href="javascript:void(0);">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="12" height="12" viewBox="0 0 12 12"
+                            >
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+
+                    </nav>
+                </div>
+            </section>
+            <section class="nav-footer">
+                <div class="nav-item col-md-4 col-lg-2">
+                    <h3 class="nav-title">About Us</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">News</a>
+                        <a class="nav-link" href="#">For investors</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </nav>
+                </div>
+                <div class="nav-item col-md-4 col-lg-2">
+                    <h3 class="nav-title">Cards</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">Credit</a>
+                        <a class="nav-link" href="#">Receivable</a>
+                    </nav>
+                </div>
+                <div class="nav-item col-md-4 col-lg-2">
+                    <h3 class="nav-title">Warehouse</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">Rates</a>
+                        <a class="nav-link" href="#">Deposits</a>
+                        <a class="nav-link" href="#">Replenish</a>
+                        <a class="nav-link" href="#">Deposit</a>
+                    </nav>
+                </div>
+                <div class="nav-item col-md-4 col-lg-2">
+                    <h3 class="nav-title">Investment</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">Stock</a>
+                        <a class="nav-link" href="#">Bonds</a>
+                        <a class="nav-link" href="#">Currency</a>
+                        <a class="nav-link" href="#">News</a>
+                        <a class="nav-link" href="#">Ideas</a>
+                    </nav>
+                </div>
+                <div class="nav-item col-md-4 col-lg-2">
+                    <h3 class="nav-title">Insurance</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">Car insurance</a>
+                        <a class="nav-link" href="#">Travel</a>
+                        <a class="nav-link" href="#">Life and health</a>
+                        <a class="nav-link" href="#">Real estate</a>
+                    </nav>
+                </div>
+                <div class="nav-item col-md-4 col-lg-2">
+                    <h3 class="nav-title">Business</h3>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">Internet acquiring</a>
+                        <a class="nav-link" href="#">Account for you</a>
+                    </nav>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <div class="ea-footer__bottom">
+        <div class="container">
+            <p class="mb-0">&#169; 2006-2017. АО &#171;Bango Bang&#187;, official website. license RNB-Design.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-3.4.0.js" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+        defer></script>
+<script defer src="js/wow.min.js"></script>
+<script defer src="js/all.min.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
