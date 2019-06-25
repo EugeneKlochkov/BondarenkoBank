@@ -76,7 +76,8 @@ button:focus {
 .ea-logo .ea-logo__title,
 .ea-box-img,
 .ea-footer__bottom,
-.color-white {
+.color-white,
+.language {
   color: $colorLight;
 }
 
@@ -166,6 +167,40 @@ svg {
 
     .navbar {
       padding: 25px 0 0;
+
+      .languages {
+        text-transform: uppercase;
+        font-size: .8125em;
+        position: relative;
+        margin-left: 14px;
+        @media (max-width: 992px) {
+          margin-left: 0;
+          display: inline-block;
+        }
+
+        :first-child {
+          padding-right: 12px;
+        }
+        .language{
+          position: relative;
+          &.active, &:hover {
+            text-decoration: underline;
+            color: $colorForLang;
+          }
+        }
+        &:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: $colorLight;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
 
       .btn_white {
         width: 93px;

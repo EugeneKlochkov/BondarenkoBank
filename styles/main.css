@@ -9550,7 +9550,8 @@ button:focus {
 .ea-logo .ea-logo__title,
 .ea-box-img,
 .ea-footer__bottom,
-.color-white {
+.color-white,
+.language {
   color: #fbfbfb;
 }
 
@@ -9627,6 +9628,40 @@ button:focus {
 }
 .ea-banner .container .navbar {
   padding: 25px 0 0;
+}
+.ea-banner .container .navbar .languages {
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  position: relative;
+  margin-left: 14px;
+}
+@media (max-width: 992px) {
+  .ea-banner .container .navbar .languages {
+    margin-left: 0;
+    display: inline-block;
+  }
+}
+.ea-banner .container .navbar .languages :first-child {
+  padding-right: 12px;
+}
+.ea-banner .container .navbar .languages .language {
+  position: relative;
+}
+.ea-banner .container .navbar .languages .language.active, .ea-banner .container .navbar .languages .language:hover {
+  text-decoration: underline;
+  color: #dd2565;
+}
+.ea-banner .container .navbar .languages:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fbfbfb;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .ea-banner .container .navbar .btn_white {
   width: 93px;

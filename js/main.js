@@ -1,6 +1,12 @@
 (function ($) {
     $(function () {
         new WOW().init();
+        $('.language').on('click', function () {
+            $(this)
+                .addClass('active')
+                .siblings()
+                .removeClass('active');
+        });
         $('.nav-item a').on('click', function () {
             var $this = $(this),
                 i = $(this).data('tab');
@@ -30,11 +36,11 @@
         });
 
         $('.nav-footer .nav-title').on('click', function () {
-
-            if($(this).hasClass('active')) {
-                $(this).removeClass('active');
+            var $this = $(this);
+            if($this.hasClass('active')) {
+                $this.removeClass('active');
             } else {
-                $(this)
+                $this
                     .addClass('active')
                     .parent()
                     .siblings()
