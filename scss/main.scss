@@ -727,16 +727,20 @@ svg {
     }
 
     svg {
-      //fill: $pink;
+      fill: $pink;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    &:hover svg {
-      fill: #00b3ff;
-      filter: none;
+    &:hover {
+      @include color-gradient;
+      border-color: white;
+      svg {
+        fill: $colorLight;
+        filter: none;
+      }
     }
   }
 }

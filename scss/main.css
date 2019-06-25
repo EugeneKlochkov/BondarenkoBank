@@ -10199,13 +10199,18 @@ button:focus {
   color: #c82367;
 }
 .ea-social .nav-link svg {
+  fill: #c82367;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.ea-social .nav-link:hover {
+  background: linear-gradient(to right, #4a1570, #c82367);
+  border-color: white;
+}
 .ea-social .nav-link:hover svg {
-  fill: #00b3ff;
+  fill: #fbfbfb;
   filter: none;
 }
 
