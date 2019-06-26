@@ -10354,4 +10354,11 @@ button:focus {
   font-weight: 500;
 }
 
+#map {
+  height: 400px;
+  margin-top: 30px;
+  /*width: 60%;
+  margin: 0 auto;*/
+}
+
 /*# sourceMappingURL=main.css.map */
