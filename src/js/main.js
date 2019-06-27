@@ -1,12 +1,17 @@
 (function ($) {
     $(function () {
+        //Инициализация анимаций
         new WOW().init();
+
+        //Добавление-удаление класа active для переключателей языка
         $('.language').on('click', function () {
             $(this)
                 .addClass('active')
                 .siblings()
                 .removeClass('active');
         });
+
+        //Переключение табов
         $('.nav-item a').on('click', function () {
             var $this = $(this),
                 i = $(this).data('tab');
@@ -22,6 +27,7 @@
                 .removeClass('active');
         });
 
+        //Кнопка скролинга к началу страницы
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 500) {
                 $('.top-scroll').css('display', 'block');
@@ -35,6 +41,7 @@
             w.animate({scrollTop: 0}, 500);
         });
 
+        //Разворачивание меню в футере при screen small
         $('.nav-footer .nav-title').on('click', function () {
             var $this = $(this);
             if ($this.hasClass('active')) {
@@ -48,10 +55,36 @@
                     .removeClass('active');
             }
         });
-        
+
+        //Слайдер
+        $('.ea-slider').slick({
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '80px',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        centerPadding: false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
     });
 })(jQuery);
 
+//Карта
 function initMap() {
     var container = $('#map')[0],
         content = $('#info-w').html(),

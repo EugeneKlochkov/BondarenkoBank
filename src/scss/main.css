@@ -9488,6 +9488,9 @@ body {
   z-index: 3;
   opacity: 0.6;
 }
+.top-scroll:hover {
+  opacity: 1;
+}
 .top-scroll svg {
   width: 60%;
 }
@@ -9547,7 +9550,8 @@ button:focus {
 .ea-box-img,
 .ea-footer__bottom,
 .color-white,
-.language {
+.language,
+.slide {
   color: #fbfbfb;
 }
 
@@ -10206,6 +10210,102 @@ button:focus {
   filter: none;
 }
 
+.slick-slider {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+.slick-slider__title {
+  color: #c82367;
+  font-weight: 300;
+}
+
+.ea-slider {
+  position: relative;
+}
+.ea-slider .slide {
+  background: linear-gradient(to right, #4a1570, #c82367);
+  padding: 50px 40px;
+  margin: 10px;
+  border-radius: 3px;
+}
+@media (max-width: 992px) {
+  .ea-slider .slide {
+    margin: 10px;
+  }
+}
+.ea-slider .slide:nth-child(odd) {
+  background: url("../img/bg-section1.jpg");
+}
+.ea-slider .slide:nth-child(even) {
+  background: url("../img/bg-section2.jpg");
+}
+.ea-slider .slick-arrow {
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 0.5;
+  border: none;
+  z-index: 1;
+  outline: none;
+  cursor: pointer;
+}
+.ea-slider .slick-arrow:hover {
+  opacity: 1;
+}
+.ea-slider .slick-next {
+  right: 15px;
+  background: url("../img/arrow-right.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+.ea-slider .slick-prev {
+  left: 15px;
+  background: url("../img/arrow-left.png") no-repeat 50% 50%;
+  background-size: cover;
+}
+.ea-slider .slick-dots {
+  padding: 0;
+  text-align: center;
+}
+.ea-slider .slick-dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  padding: 0;
+}
+.ea-slider .slick-dots li button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #c82367;
+  box-shadow: 3px 3px 10px 0 #000000, 0 0 5px 2px #4a1570 inset;
+}
+.ea-slider .slick-dots .slick-active button {
+  background: linear-gradient(to right, #4a1570, #c82367);
+}
+.ea-slider .btn_white {
+  width: 125px;
+  height: 32px;
+}
+
+.ea-map__title {
+  padding-bottom: 20px;
+}
+
+#map {
+  height: 400px;
+}
+
 .nav-footer {
   display: flex;
   flex-wrap: wrap;
@@ -10325,6 +10425,7 @@ button:focus {
 .sign-in__header .ea-back {
   color: #fbfbfb;
   font-size: 1.5rem;
+  width: 30px;
 }
 .sign-in form {
   padding: 20px 30px;
@@ -10344,13 +10445,6 @@ button:focus {
   height: 40px;
   text-transform: uppercase;
   font-weight: 500;
-}
-
-#map {
-  height: 400px;
-  margin-top: 30px;
-  /*width: 60%;
-  margin: 0 auto;*/
 }
 
 /*# sourceMappingURL=main.css.map */

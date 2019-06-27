@@ -31,6 +31,10 @@ body {
   outline: none;
   z-index: 3;
   opacity: .6;
+  &:hover {
+    opacity: 1;
+  }
+
   svg {
     width: 60%;
   }
@@ -78,7 +82,8 @@ button:focus {
 .ea-box-img,
 .ea-footer__bottom,
 .color-white,
-.language {
+.language,
+.slide {
   color: $colorLight;
 }
 
@@ -177,13 +182,16 @@ svg {
         :first-child {
           padding-right: 12px;
         }
-        .language{
+
+        .language {
           position: relative;
+
           &.active, &:hover {
             text-decoration: underline;
             color: $colorForLang;
           }
         }
+
         &:before {
           content: '';
           display: inline-block;
@@ -324,6 +332,7 @@ svg {
 
   &.ea-box_2 {
     padding-top: 44px;
+
     .ea-wrap-left {
       padding-top: 42px;
       @media (max-width: 1200px) {
@@ -334,6 +343,7 @@ svg {
         order: 2;
       }
     }
+
     @media (max-width: 992px) {
       .ea-wrap-right {
         order: 1;
@@ -701,6 +711,7 @@ svg {
 
 .ea-social {
   padding-right: 0;
+
   .nav {
     display: flex;
     justify-content: flex-end;
@@ -733,6 +744,7 @@ svg {
     &:hover {
       @include color-gradient;
       border-color: white;
+
       svg {
         fill: $colorLight;
         filter: none;
@@ -741,6 +753,113 @@ svg {
   }
 }
 
+.slick-slider {
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  &__title {
+    color: $pink;
+    font-weight: 300;
+  }
+}
+
+.ea-slider {
+  position: relative;
+
+  .slide {
+    @include color-gradient;
+    padding: 50px 40px;
+    margin: 10px;
+    border-radius: 3px;
+    @media (max-width: 992px) {
+      margin: 10px;
+    }
+
+      &:nth-child(odd) {
+      background: url("../img/bg-section1.jpg");
+    }
+
+    &:nth-child(even) {
+      background: url("../img/bg-section2.jpg");
+    }
+  }
+
+  .slick-arrow {
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $white;
+    opacity: 0.5;
+    border: none;
+    z-index: 1;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .slick-arrow:hover {
+    opacity: 1;
+  }
+
+  .slick-next {
+    right: 15px;
+    background: url("../img/arrow-right.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  .slick-prev {
+    left: 15px;
+    background: url("../img/arrow-left.png") no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  .slick-dots {
+    padding: 0;
+    text-align: center;
+  }
+
+  .slick-dots li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    padding: 0;
+
+    button {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      border-radius: 50%;
+      background: $white;
+      border: 1px solid $pink;
+      box-shadow: 3px 3px 10px 0 #000000,
+      0 0 5px 2px $violet inset;
+    }
+  }
+
+  .slick-dots .slick-active button {
+    @include color-gradient;
+  }
+
+  .btn_white {
+    width: 125px;
+    height: 32px;
+  }
+}
+
+.ea-map__title {
+  padding-bottom: 20px;
+}
+
+#map {
+  height: 400px;
+}
 
 .nav-footer {
   display: flex;
@@ -819,6 +938,7 @@ svg {
       width: 140px;
       height: 38px;
       padding-left: 6px;
+
       .box-phone {
         display: inline-block;
         width: 19px;
@@ -826,6 +946,7 @@ svg {
         vertical-align: middle;
         background: url("../img/phone-outline.png");
       }
+
       &:hover .box-phone {
         background: url("../img/phone-outline-white.png");
       }
@@ -860,26 +981,32 @@ svg {
   padding: 0;
   border-radius: 5px;
   overflow: hidden;
+
   &__header {
     @include color-gradient;
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
+
     .ea-back {
       color: $colorLight;
       font-size: 1.5rem;
+      width: 30px;
     }
   }
+
   form {
     padding: 20px 30px;
     font: $mainFont;
+
     .form-control:focus {
       color: $colorDark;
       background-color: $white;
       border-color: $pink;
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(200,35,103,.4);
+      box-shadow: 0 0 0 0.2rem rgba(200, 35, 103, .4);
     }
+
     .btn_pink {
       display: block;
       margin: 0 auto;
@@ -889,11 +1016,4 @@ svg {
       font-weight: 500;
     }
   }
-}
-
-#map {
-  height: 400px;
-  margin-top: 30px;
-  /*width: 60%;
-  margin: 0 auto;*/
 }
