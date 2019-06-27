@@ -9586,6 +9586,9 @@ button:focus {
 .navbar-toggler {
   background: #4a1570;
 }
+.navbar-toggler svg {
+  width: 20px;
+}
 
 .navbar .ea-navbar-nav_stile .nav-item .nav-link {
   color: #dabfd5;

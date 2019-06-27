@@ -126,6 +126,9 @@ svg {
 /*Стили для ссылок верхнего меню*/
 .navbar-toggler {
   background: $violet;
+  svg {
+    width: 20px;
+  }
 }
 
 .navbar .ea-navbar-nav_stile .nav-item .nav-link {
