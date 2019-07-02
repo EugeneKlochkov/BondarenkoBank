@@ -856,13 +856,15 @@ svg {
   }
 }
 
+/*
+Для карты
 .ea-map__title {
   padding-bottom: 20px;
 }
 
 #map {
   height: 400px;
-}
+}*/
 
 .nav-footer {
   display: flex;
@@ -915,7 +917,7 @@ svg {
 }
 
 .ea-footer {
-  padding-top: 86px;
+  padding-top: 0;//если показана карта 86px
 
   .ea-phone {
     padding: 0;

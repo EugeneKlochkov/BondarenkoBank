@@ -29,7 +29,7 @@
 
         //Кнопка скролинга к началу страницы
         $(window).on('scroll', function () {
-            if ($(window).scrollTop() > 500) {
+            if ($(window).scrollTop() > 800) {
                 $('.top-scroll').css('display', 'block');
             } else {
                 $('.top-scroll').css('display', 'none');
@@ -85,6 +85,7 @@
 })(jQuery);
 
 //Карта
+/*
 function initMap() {
     var container = $('#map')[0],
         content = $('#info-w').html(),
@@ -190,10 +191,10 @@ function initMap() {
     marker.addListener('click', function () {
         infowindow.open(map, marker);
     });
-    /*Центрирование маркера при изменении размера карты*/
+    /!*Центрирование маркера при изменении размера карты*!/
     google.maps.event.addDomListener(window, 'resize', function() {
         var center = map.getCenter();
         google.maps.event.trigger(map, 'resize');
         map.setCenter(center);
     });
-}
+}*/
